@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "msw": "^0.38.1"
+  },
+  "scripts": {
+    "serve": "tsc && node ./build/indes.js"
+  }
+}
