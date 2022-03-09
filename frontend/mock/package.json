@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "msw": "^0.38.1"
+  },
+  "scripts": {
+    "serve": "tsc && node ./build/indes.js"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}

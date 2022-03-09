@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "# experience",
+  "private": true,
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "mock": "cd mock && yarn serve",
+    "dev": "concurrently \"yarn mock\""
+  },
+  "keywords": [
+    "mock"
+  ],
+  "author": "czj",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}

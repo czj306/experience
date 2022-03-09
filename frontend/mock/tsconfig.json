@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "target": "ES2015",
+    "outDir": "./public",
+    "strict": true
+  },
+  "files": [
+    "index.ts",
+    "handlers.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
