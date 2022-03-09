@@ -7,5 +7,8 @@
   },
   "scripts": {
     "serve": "tsc && node ./build/indes.js"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
