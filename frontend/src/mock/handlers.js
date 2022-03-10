@@ -1,8 +1,8 @@
 // mock/handlers.ts
-import { graphql } from 'msw'
+import { graphql, rest } from 'msw'
 export const handlers = [
   // Handles a "Login" mutation
-  graphql.mutation('Login', (req: any, res: any, ctx: any) => {
+  graphql.mutation('https://github.com/octocat', (req, res, ctx) => {
     const { username } = req.variables
     sessionStorage.setItem('is-authenticated', username)
     return res(
@@ -43,4 +43,12 @@ export const handlers = [
       }),
     )
   }),
+]
+
+export const defaultHandlers = [
+  rest.get('*', (req, res, ctx) => res(ctx.status(200), ctx.json({}))),
+  rest.post('*', (req, res, ctx) => res(ctx.status(200), ctx.json({}))),
+  rest.patch('*', (req, res, ctx) => res(ctx.status(200), ctx.json({}))),
+  rest.put('*', (req, res, ctx) => res(ctx.status(200), ctx.json({}))),
+  rest.delete('*', (req, res, ctx) => res(ctx.status(200), ctx.json({}))),
 ]
