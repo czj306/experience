@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { getUserInfo } from "./api/index";
 
-async function getData () {
+const getData  = async () => {
   return await getUserInfo();
 }
 
-function App() {
+const App = () => {
   useEffect(() => getData(), [])
   return (
     <div>
