@@ -26,6 +26,14 @@
 - test：测试用例
 - utils：工具库
 
-### Design Overview
+<!-- ### Design Overview -->
 
 
+### 环境配置实现
+> 左侧的文件比右侧的文件具有更高的优先级：
+
+```bash
+npm start: .env.development.local, .env.development, .env.local, .env
+npm run build: .env.production.local, .env.production, .env.local, .env
+npm test: .env.test.local, .env.test, .env (注意没有 .env.local )
+```
