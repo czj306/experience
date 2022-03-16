@@ -9,7 +9,6 @@ function getUserInfo(){
     http("get",'/GetUserInfo').then(res => {
       resolve (res);
     },error => {
-      console.log("网络异常~",error);
       reject(error)
     })
   }) 
