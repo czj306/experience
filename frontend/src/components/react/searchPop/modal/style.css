@@ -1,0 +1,175 @@
+:root {
+    --c-text-light-3: #90a4b7;
+    --c-text-light: var(--c-text-light-2);
+    --c-text-lighter: var(--c-text-light-3);
+    --muted-color: var(--c-text-lighter);
+    --modal-width: 560px;
+    --modal-height: 600px;
+    --modal-background: #f5f6f7;
+    --modal-shadow: inset 1px 1px 0 0 hsla(0,0%,100%,.5),0 3px 8px 0 #555a64;
+    --container-background: rgba(101,108,133,.8);
+    --key-shadow: inset 0 -2px 0 0 #cdcde6,inset 0 0 1px 1px #fff,0 1px 2px 1px rgba(30,35,90,.4);
+    --key-gradient: linear-gradient(-225deg,#d5dbe4,#f8f8f8);
+    --footer-height: 44px;
+    --footer-background: #fff;
+    --footer-shadow: 0 -1px 0 0 #e0e3e8,0 -3px 6px 0 rgba(69,98,155,.12);
+    --spacing: 12px;
+
+    --c-brand: #3eaf7c;
+    --c-brand-light: #4abf8a;
+
+    --primary-color: var(--c-brand);
+    --highlight-color: var(--primary-color);
+    --searchbox-shadow: inset 0 0 0 2px var(--primary-color);
+    --text-color: var(--c-text-light);
+    --muted-color: var(--c-text-lighter);
+    --searchbox-height: 56px;
+    --searchbox-background: #f2f2f2;
+    --searchbox-focus-background: #fff;
+}
+
+.search-modal-bg {
+    background-color: var(--container-background);
+    left: 0;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 200;
+}
+
+.search-modal {
+    background: var(--modal-background);
+    border-radius: 6px;
+    box-shadow: var(--modal-shadow);
+    flex-direction: column;
+    margin: 60px auto auto;
+    max-width: var(--modal-width);
+    position: relative;
+}
+
+.search-bar {
+    display: flex;
+    padding: var(--spacing) var(--spacing) 0;
+}
+
+.search-bar .search-form {
+    align-items: center;
+    background: var(--searchbox-focus-background);
+    border-radius: 4px;
+    box-shadow: var(--searchbox-shadow);
+    display: flex;
+    height: var(--searchbox-height);
+    margin: 0;
+    padding: 0 var(--spacing);
+    position: relative;
+    width: 100%;
+}
+
+.search-input-label {
+    align-items: center;
+    color: var(--highlight-color);
+    display: flex;
+    justify-content: center;
+}
+
+.search-input-label .search-icon {
+    stroke-width: 1.6;
+}
+
+.search-input-label svg {
+    height: 24px;
+    width: 24px;
+}
+
+.search-input {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: var(--text-color);
+    flex: 1;
+    font: inherit;
+    /* font-size: 1.2em; */
+    height: 100%;
+    outline: none;
+    padding: 0 0 0 8px;
+    width: 80%;
+}
+
+.search-dropdown {
+    max-height: calc(var(--modal-height) - var(--searchbox-height) - var(--spacing) - var(--footer-height));
+    min-height: var(--spacing);
+    overflow-y: auto;
+    overflow-y: overlay;
+    padding: 0 var(--spacing);
+}
+
+.search-dropdown .search-start-screen {
+    font-size: .9em;
+    margin: 0 auto;
+    padding: 36px 0;
+    text-align: center;
+    width: 80%;
+}
+
+.search-footer {
+    align-items: center;
+    background: var(--footer-background);
+    border-radius: 0 0 8px 8px;
+    box-shadow: var(--footer-shadow);
+    display: flex;
+    flex-direction: row-reverse;
+    flex-shrink: 0;
+    height: var(--footer-height);
+    justify-content: space-between;
+    padding: 0 var(--spacing);
+    position: relative;
+    user-select: none;
+    z-index: 300;
+}
+
+.search-commands {
+    color: var(--muted-color);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search-commands .search-commands-key {
+    align-items: center;
+    background: var(--key-gradient);
+    border-radius: 2px;
+    box-shadow: var(--key-shadow);
+    display: flex;
+    height: 18px;
+    justify-content: end;
+    margin-right: 0.4em;
+    padding-bottom: 1px;
+    width: 20px;
+}
+
+.search-commands .search-commands-key svg {
+    padding-right: 3px;
+}
+
+.search-commands .search-label {
+    font-size: .75em;
+    line-height: 1.6em;
+}
+
+.search-commands ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.search-commands li {
+    align-items: center;
+    display: flex;
+}
+
+.search-commands li:not(:last-of-type) {
+    margin-right: 0.8em;
+}

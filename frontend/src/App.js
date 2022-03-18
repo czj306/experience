@@ -4,7 +4,7 @@
  * @Author: Miracle_Sir
  * @Date: 2022-03-10 16:23:29
  * @LastEditors: Miracle_Sir
- * @LastEditTime: 2022-03-16 19:52:01
+ * @LastEditTime: 2022-03-18 10:22:45
  */
 import { useEffect } from "react";
 import { getUserInfo } from "./api/index";
@@ -18,9 +18,7 @@ const getData  = async () => {
 const App = () => {
   useEffect(() => getData(), [])
   return (
-    <div>
       <SearchPop></SearchPop>
-    </div>
   );
 }
 
